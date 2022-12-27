@@ -1,6 +1,7 @@
 package tech.getarrays.employeemanager.service;
 
-import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import tech.getarrays.employeemanager.exception.EmployeeManagerException;
 import tech.getarrays.employeemanager.model.Employee;
 import tech.getarrays.employeemanager.repo.EmployeeRepo;
@@ -8,7 +9,8 @@ import tech.getarrays.employeemanager.repo.EmployeeRepo;
 import java.util.List;
 import java.util.UUID;
 
-@Repository
+@Service
+@Transactional
 public class EmployeeService {
 
     private final EmployeeRepo repo;
